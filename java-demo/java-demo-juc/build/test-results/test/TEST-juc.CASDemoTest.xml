@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="juc.CASDemoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-12T12:18:24" hostname="qujianfeideMacBook-Pro.local" time="0.017">
+  <properties/>
+  <testcase name="testAtomicDemo()" classname="juc.CASDemoTest" time="0.017"/>
+  <system-out><![CDATA[cas result=true, user=User(name=t2, age=30)
+cas result=false, user=User(name=t2, age=30)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

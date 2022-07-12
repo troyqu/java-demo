@@ -1,0 +1,49 @@
+buildscript {
+    ext {
+        junitVersion = '5.7.1'
+    }
+}
+
+plugins {
+    id 'io.franzbecker.gradle-lombok' version '2.1'
+}
+
+allprojects {
+
+    group = "com.troyqu.javademo"
+    version '0.0.1-troyqu'
+    apply plugin: 'java'
+
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
+
+subprojects {
+
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+
+    apply plugin: 'io.franzbecker.gradle-lombok'
+
+    lombok {
+        version = "1.18.4"
+        sha256 = ""
+    }
+
+    dependencies {
+
+        testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+        testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    }
+}
+

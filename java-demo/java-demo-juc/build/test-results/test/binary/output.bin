@@ -1,0 +1,2 @@
+,cas result=true, user=User(name=t2, age=30)
+-cas result=false, user=User(name=t2, age=30)
