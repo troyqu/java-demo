@@ -14,4 +14,15 @@ public class CASDemoTest {
         casDemo.atomicDemo();
     }
 
+    @Test
+    public void testAtomicABADemo() throws InterruptedException {
+        val casDemo = new CASDemo();
+        casDemo.atomicABADemo();
+    }
+
+    @Test
+    public void testAtomicABAResolveDemo() throws InterruptedException {
+        val casDemo = new CASDemo();
+        casDemo.atomicABAResolveDemo();
+    }
 }
