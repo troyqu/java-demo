@@ -1,2 +1,3 @@
 rootProject.name = "java-demo"
 include "java-demo-juc"
+include "java-demo-nio"
