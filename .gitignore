@@ -5,6 +5,7 @@ java-demo/build
 java-demo/*/.idea
 java-demo/*/build
 java-demo/*/.gradle
+/java-demo/*/build/*
 
 # ignore .idea & .gradle files
 java-demo/.idea/*.*
@@ -13,4 +14,4 @@ java-demo/.gradle/*.*
 java-demo/*/.idea/*.*
 java-demo/*/build/*.*
 java-demo/*/.gradle/*.*
-
+*.class
