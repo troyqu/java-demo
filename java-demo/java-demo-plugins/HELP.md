@@ -42,12 +42,10 @@ java-demo-plugins
 * MainApplication.java：通过读取plugins.properties中配置的实现类来完成对于插件的动态加载，缺点就是后期如果扩展了新的插件，还需要更新plugins.properties文件。
 
 
-*
-MainApplicationSPI.java：相当于MainApplication.java使用SPI机制实现的方式，优点是使用SPI机制，实现方便但是缺点也是需要收到META-INF/services元数据配置影响，如果扩展了新的插件，需要更新配置
+* MainApplicationSPI.java：相当于MainApplication.java使用SPI机制实现的方式，优点是使用SPI机制，实现方便但是缺点也是需要收到META-INF/services元数据配置影响，如果扩展了新的插件，需要更新配置
 
 
-*
-MainApplication2.java：在MainApplication的基础上，摒弃了对于配置文件的依赖，通过读取项目中依赖的插件jar命名规范，来动态加载插件jar中的实现，从而做到后期扩展新插件，不用修改任何代码和配置就能完成对于新插件的支持。前提就是对于插件的命名一定要满足规范。
+* MainApplication2.java：在MainApplication的基础上，摒弃了对于配置文件的依赖，通过读取项目中依赖的插件jar命名规范，来动态加载插件jar中的实现，从而做到后期扩展新插件，不用修改任何代码和配置就能完成对于新插件的支持。前提就是对于插件的命名一定要满足规范。
 
 ```java
 file.getName().endsWith("-plugins-1.0-SNAPSHOT.jar")
