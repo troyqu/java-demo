@@ -12,6 +12,7 @@ public class MainApplication {
     /**
      * 1.根据引入的acs和aws的插件来处理tasks任务，acs和aws插件只处理各自插件支持的任务
      * 2.如果后期扩展其他厂商，主程序不用调整，只需要在实现其他厂商插件, 然后引入程序依赖即可
+     * 3.依赖于plugins.properties的配置，如果扩展其他plugins需要在里面配置新的实现类
      *
      * @param args
      */
