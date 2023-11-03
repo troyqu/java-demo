@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group 'com.troyqu.demo'
+version '1.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.troyqu.demo' // Replace with your desired group ID
+            artifactId = 'plugins-api'  // Replace with your desired artifact ID
+            version =   '1.1-SNAPSHOT'// Replace with your desired version
+
+            from components.java
+        }
+    }
+}
+
+
+
+//plugins {
+//    id 'java'
+////    id 'org.springframework.boot' version '2.7.17'
+////    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+//}
+//
+//group = 'com.troyqu.demo'
+//version = '0.0.1-SNAPSHOT'
+//
+//java {
+//    sourceCompatibility = '1.8'
+//}
+//
+//repositories {
+//    mavenCentral()
+//}
+//
+//dependencies {
+////    implementation 'org.springframework.boot:spring-boot-starter'
+////    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//}
+//
+//

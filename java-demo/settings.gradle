@@ -7,3 +7,8 @@ include 'java-demo-aop'
 include 'java-demo-aop:dynamic-proxy-demo'
 include 'java-demo-aop:static-proxy-demo'
 
+include 'java-demo-plugins'
+include 'java-demo-plugins:plugins-api'
+include 'java-demo-plugins:acs-plugins'
+include 'java-demo-plugins:aws-plugins'
+

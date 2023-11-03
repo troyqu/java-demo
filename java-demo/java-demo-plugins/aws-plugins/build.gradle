@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'com.troyqu.demo'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '1.8'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation 'com.troyqu.demo:plugins-api:1.1-SNAPSHOT'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.troyqu.demo' // Replace with your desired group ID
+            artifactId = 'aws-plugins'  // Replace with your desired artifact ID
+            version =   '1.0-SNAPSHOT'// Replace with your desired version
+
+            from components.java
+        }
+    }
+}
